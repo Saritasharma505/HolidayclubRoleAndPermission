@@ -1,13 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('global.abilities.title')</h3>
+   <h1 class="page-title fa fa-briefcase"> Permission Edit</h1>
     
     {!! Form::model($ability, ['method' => 'PUT', 'route' => ['admin.abilities.update', $ability->id]]) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('global.app_edit')
+           <a href="{{ route('admin.permissions.index') }}" class="btn btn-success">Back</a>
         </div>
 
         <div class="panel-body">

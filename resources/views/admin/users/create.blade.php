@@ -1,12 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('global.users.title')</h3>
+    <!-- <h3 class="page-title">@lang('global.users.title')</h3> -->
+    <h3 class="page-title fa fa-user">User Create</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['admin.users.store']]) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('global.app_create')
+            <a href="{{ route('admin.users.index') }}" class="btn btn-success">Back</a>
         </div>
         
         <div class="panel-body">

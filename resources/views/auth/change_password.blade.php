@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">Change password</h3>
+    <h3 class="page-title fa fa-key">Change Password</h3>
 
     @if(session('success'))
         <!-- If password successfully show message -->
@@ -15,7 +15,7 @@
         <!-- If no success message in flash session show change password form  -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                @lang('global.app_edit')
+               
             </div>
 
             <div class="panel-body">

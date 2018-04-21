@@ -1,14 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('global.users.title')</h3>
+   <h3 class="page-title fa fa-user">User Edit</h3>
     
     {!! Form::model($user, ['method' => 'PUT', 'route' => ['admin.users.update', $user->id]]) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('global.app_edit')
-        </div>
+             <a href="{{ route('admin.users.index') }}" class="btn btn-success">Back</a>
+        </div>  
 
         <div class="panel-body">
             <div class="row">

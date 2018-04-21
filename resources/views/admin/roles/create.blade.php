@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-    <h3 class="page-title">@lang('global.roles.title')</h3>
+    <h3 class="fa fa-briefcase"> Role Create</h3>
     {!! Form::open(['method' => 'POST', 'route' => ['admin.roles.store']]) !!}
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('global.app_create')
+            <a href="{{ route('admin.roles.index') }}" class="btn btn-success">Back</a>
         </div>
         
         <div class="panel-body">

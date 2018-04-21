@@ -1,15 +1,14 @@
 @inject('request', 'Illuminate\Http\Request')
 @extends('layouts.app')
 
+
 @section('content')
-    <h3 class="page-title">@lang('global.abilities.title')</h3>
-    <p>
-        <a href="{{ route('admin.abilities.create') }}" class="btn btn-success">@lang('global.app_add_new')</a>
-    </p>
+    <h1 class="page-title fa fa-user"> Permission Management</h1>
+   
 
     <div class="panel panel-default">
         <div class="panel-heading">
-            @lang('global.app_list')
+            <a href="{{ route('admin.abilities.create') }}" class="btn btn-success">@lang('global.app_add_new')</a>
         </div>
 
         <div class="panel-body table-responsive">
@@ -18,7 +17,7 @@
                     <tr>
                         <th style="text-align:center;"><input type="checkbox" id="select-all" /></th>
                         <th>@lang('global.abilities.fields.name')</th>
-                        <th>&nbsp;</th>
+                        <th>Action</th>
 
                     </tr>
                 </thead>
@@ -30,15 +29,15 @@
                                 <td></td>
                                 <td>{{ $ability->name }}</td>
                                 <td>
-                                    <a href="{{ route('admin.abilities.edit',[$ability->id]) }}" class="btn btn-xs btn-info">@lang('global.app_edit')</a>
-                                    {!! Form::open(array(
+                                    <a href="{{ route('admin.abilities.edit',[$ability->id]) }}" class="btn btn-md btn-info">@lang('global.app_edit')</a>
+                                    <!-- {!! Form::open(array(
                                         'style' => 'display: inline-block;',
                                         'method' => 'DELETE',
                                         'onsubmit' => "return confirm('".trans("global.app_are_you_sure")."');",
                                         'route' => ['admin.abilities.destroy', $ability->id])) !!}
-                                    {!! Form::submit(trans('global.app_delete'), array('class' => 'btn btn-xs btn-danger')) !!}
+                                    {!! Form::submit(trans('global.app_delete'), array('class' => 'btn btn-md btn-danger')) !!}
                                     {!! Form::close() !!}
-                                </td>
+                                </td> -->
 
                             </tr>
                         @endforeach
